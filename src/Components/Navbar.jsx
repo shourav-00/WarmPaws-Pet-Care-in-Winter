@@ -30,17 +30,17 @@ const Navbar = () => {
           <div>
             <NavLink
               to="/"
-              className="text-white relative cursor-pointer group flex items-center gap-1"
+              className="text-white cursor-pointer flex items-center gap-1"
             >
               <img
                 className="h-5 rounded-full"
                 src={catlogo}
-                alt="preety-kit"
+                alt="preety-kitty"
               />
               <h2 className="text-sm sm:text-base font-semibold">
-                PREETY-KITTY
+                WarmPaws
               </h2>
-              <span className="absolute left-0 bottom-[-2px] h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+             
             </NavLink>
           </div>
 
