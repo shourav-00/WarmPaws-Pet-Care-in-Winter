@@ -73,6 +73,13 @@ const UpdateProfile = () => {
         <div className="p-5 md:p-10 flex justify-center">
           <form onSubmit={handleUpdate} className="w-full max-w-md">
             <fieldset className="fieldset flex flex-col gap-4">
+              <label className="label">Email:</label>
+              <input
+                type="email"
+                name="email"  readOnly
+                className="input w-full sm:w-full sm:h-[50px] border-2 border-gray-400 focus:outline-none"
+                placeholder={user.email}
+              />
               <label className="label">Name:</label>
               <input
                 type="text"
@@ -80,13 +87,7 @@ const UpdateProfile = () => {
                 className="input w-full sm:w-full sm:h-[50px] border-2 border-gray-400 focus:outline-none"
                 placeholder="Enter new name"
               />
-               <label className="label">Email:</label>
-              <input
-                type="email"
-                name="email" required
-                className="input w-full sm:w-full sm:h-[50px] border-2 border-gray-400 focus:outline-none"
-                placeholder="Enter new email"
-              />
+               
 
               <label className="label">URL:</label>
               <input
