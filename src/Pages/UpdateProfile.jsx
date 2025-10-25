@@ -14,12 +14,12 @@ const UpdateProfile = () => {
   const handleUpdate = (e) => {
     e.preventDefault();
     const userName=e.target.userName.value;   
-    const email=e.target.email.value;    
+     
     const photo=e.target.photo.value;
     //console.log(userName,photo);
-    updateUser({ displayName:userName,photoURL:photo,email:email})
+    updateUser({ displayName:userName,photoURL:photo})
     .then(()=>{
-        setUser({...user,displayName:userName,photoURL:photo,email:email})
+        setUser({...user,displayName:userName,photoURL:photo})
         toast.success('Succesfully Updated')
         e.target.reset()
     }).catch(()=>{
