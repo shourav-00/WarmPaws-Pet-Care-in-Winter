@@ -57,6 +57,7 @@ const Register = () => {
       })
       .catch((err) => {
         // console.log(err.message);
+        toast.error("Wrong Credential");
       });
   };
 
