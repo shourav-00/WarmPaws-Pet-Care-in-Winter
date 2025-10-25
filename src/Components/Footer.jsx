@@ -49,7 +49,7 @@ const Footer = () => {
         {/* 2nd Child */}
         <div className="col-span-1">
           <h2 className="mb-3 pt-2 text-center text-[25px]">Contact</h2>
-          <h2 className="text-center my-2">Email: hello@pipersfarm.com</h2>
+          <h2 className="text-center my-2">Email: hello@warmhouse.com</h2>
           <h2 className="text-center my-2">Call us: 01392 881380</h2>
 
           <h2 className="my-4 text-center">Follow Us</h2>
