@@ -12,7 +12,9 @@ const ForgetPass = () => {
   e.preventDefault();
         forgetpass(email).
         then(()=>{
-          toast.success('Check Your Email');
+          toast.success('Send to Your Email');
+          window.open("https://mail.google.com", "_blank");
+         
         }).catch(err=>{
           toast.error(err.message);
         })
