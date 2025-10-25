@@ -43,7 +43,7 @@ const User = () => {
         navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((err) => {
-        // console.log(err);
+          toast.error("Wrong Credential");
       });
   };
 

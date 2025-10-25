@@ -13,12 +13,13 @@ const UpdateProfile = () => {
   }
   const handleUpdate = (e) => {
     e.preventDefault();
-    const userName=e.target.userName.value;       
+    const userName=e.target.userName.value;   
+    const email=e.target.email.value;    
     const photo=e.target.photo.value;
     //console.log(userName,photo);
-    updateUser({ displayName:userName,photoURL:photo})
+    updateUser({ displayName:userName,photoURL:photo,email:email})
     .then(()=>{
-        setUser({...user,displayName:userName,photoURL:photo})
+        setUser({...user,displayName:userName,photoURL:photo,email:email})
         toast.success('Succesfully Updated')
         e.target.reset()
     }).catch(()=>{
@@ -75,15 +76,22 @@ const UpdateProfile = () => {
               <label className="label">Name:</label>
               <input
                 type="text"
-                name="userName"
+                name="userName" required
                 className="input w-full sm:w-full sm:h-[50px] border-2 border-gray-400 focus:outline-none"
                 placeholder="Enter new name"
+              />
+               <label className="label">Email:</label>
+              <input
+                type="email"
+                name="email" required
+                className="input w-full sm:w-full sm:h-[50px] border-2 border-gray-400 focus:outline-none"
+                placeholder="Enter new email"
               />
 
               <label className="label">URL:</label>
               <input
                 type="text"
-                name="photo"
+                name="photo" required
                 className="input w-full sm:w-full sm:h-[50px] border-2 border-gray-400 focus:outline-none"
                 placeholder="Enter new photo"
               />
